@@ -1,0 +1,747 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #fff;
+  --main-color: #f9b707;
+  --light-color: #f4f4f4;
+  --dark-color: #272727;
+  --max-width: 1200px;
+  --site-font: "roboto", sans-serif;
+}
+
+/* Main Styling */
+body {
+  line-height: 1.4;
+  background: var(--page-bg);
+  font-family: var(--site-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", serif;
+  line-height: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Bar */
+#contactbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* padding: 0.75rem 0; */
+  color: var(--light-color);
+  font-size: 0.85rem;
+}
+
+#contactbar .location {
+  margin-right: 2rem;
+}
+
+#contactbar .location i,
+#contactbar .phone i {
+  color: var(--main-color);
+  padding: 0.75rem 0;
+}
+
+#contactbar .social {
+  color: #fff;
+  margin-left: auto;
+}
+
+#contactbar .social i {
+  margin-left: 1rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+#contactbar .social i:hover {
+  color: var(--main-color);
+}
+
+#contactbar.contactbar-inner {
+  border-bottom: 1px solid #555;
+  background: #272727;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 1rem;
+  transition: all 0.5s;
+  background-color: transparent;
+  z-index: 99;
+}
+
+/* NavBar*/
+#navbar {
+  display: block;
+  color: #fff;
+}
+
+#navbar .logo .text-primary {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#navbar .logo h1 {
+  /* remove the margin that was already specified for all headings */
+  margin-bottom: 0px;
+}
+
+#navbar .logo i {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+#navbar .navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#navbar ul li {
+  position: relative;
+}
+
+#navbar ul li:hover ul {
+  display: block;
+}
+
+#navbar ul li i {
+  margin-right: 5px;
+  transition: all 0.4s ease-out;
+}
+
+#navbar ul li:hover i {
+  transform: rotate(180deg);
+}
+
+#navbar ul li a {
+  padding: 1rem 1.5rem;
+  color: var(--light-color);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+#navbar ul li a:hover {
+  color: var(--main-color);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Issues Here need fixing: Javascript Needed
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#navbar .search {
+  color: var(--main-color);
+  /* background: var(--dark-color); */
+  padding: 1rem;
+}
+#navbar .search:hover div[id="search"] {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Searchbar */
+#searchbar {
+  position: absolute;
+  display: none;
+  /* display search box on search button click using javascipt*/
+  top: 90px;
+  width: 100%;
+  background: var(--dark-color);
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+#searchbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#searchbar input {
+  background: none;
+  color: var(--light-color);
+  border: none;
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#searchbar input:focus {
+  outline: none;
+  background: none;
+}
+
+#searchbar input::placeholder {
+  color: #ccc;
+}
+
+#searchbar input:-webkit-autofill,
+#searchbar input:-webkit-autofill:hover,
+#searchbar input:-webkit-autofill:focus,
+#searchbar input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+#searchbar .controls {
+  color: #fff;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  font-weight: 100;
+}
+
+#searchbar .controls .seperator {
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+/* Showcase */
+#showcase {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  margin-top: -89px;
+  position: relative;
+  /* this is included becuase the contactbar is making the showcase not cover the whole screen */
+}
+
+#showcase::before {
+  content: "";
+  background: url("../img/showcase-slides/showcase\ \(3\).jpg") no-repeat center
+    center / cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+}
+
+#showcase .showcase-content .top-line {
+  width: 100px;
+}
+
+#showcase .showcase-content h1 {
+  font-family: "catamaran", sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+
+#showcase .showcase-content .lead {
+  color: #fff;
+  font-family: "catamaran", sans-serif;
+  font-weight: 700;
+  font-size: 1.8;
+}
+
+/* Services */
+#services {
+  background: #fff;
+}
+
+#services .items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 1rem;
+}
+
+#services .items .item {
+  display: flex;
+}
+
+#services .items .icon {
+  margin-right: 10px;
+}
+
+#services .items .item i {
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  height: 70px;
+  position: relative;
+  width: 70px;
+  overflow: hidden;
+}
+
+#services .items i::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: var(--dark-color);
+  transition: all 0.5s cubic-bezier(0.41, 0.55, 0.48, 0.9);
+  transform: translateX(-80px);
+}
+
+#services .items .item:hover i:after {
+  transform: translateX(0px);
+}
+
+/* About Us */
+#about .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+#about .about-info {
+  padding-right: 2rem;
+}
+
+#about .about-info p {
+  color: rgb(107, 107, 107);
+}
+
+#about .about-info .btn-wrapper {
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+#about .about-image {
+  background: url("../img/two-man-holding-white-paper.jpg") no-repeat center
+    center/ cover;
+}
+
+/* Recent testimonials */
+#testimonials .items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+#testimonials .items .item {
+  padding: 1rem 2rem;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials .items .item-image {
+  text-align: center;
+  padding: 1rem;
+}
+
+#testimonials .items .item img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+#testimonials .items .testimonial-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#testimonials .items .item small {
+  color: #777;
+  margin-bottom: 0.25rem;
+  background: #eee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+}
+
+#testimonials .items .item p {
+  color: #444;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+#testimonials .items .item p::before {
+  content: open-quote;
+  text-align: left;
+}
+
+#testimonials .items .item p::after {
+  content: close-quote;
+  text-align: right;
+}
+
+#testimonials .items .item p::after,
+#testimonials .items .item p::before {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+  display: inline-block;
+}
+
+/* Home Gallery */
+#work .categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0rem;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  height: 300px;
+  padding: 0px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+/* position the image */
+.flip-box-front img,
+.flip-box-back img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Position the text on the page */
+.flip-box-front .text-wrap,
+.flip-box-back .text-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.flip-box-front .text-wrap {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.flip-box-back .text-wrap {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Style the back side */
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.flip-box-back a {
+  color: inherit;
+}
+
+.flip-box-back .text-wrap > a {
+  text-decoration: underline;
+}
+.flip-box-back .text-wrap > a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+/* Contact form */
+#contact .form-container {
+  padding: 0px 20px;
+  width: 80%;
+  margin: 0 auto;
+  /* background: #000; */
+}
+
+#contact h3 {
+  text-transform: none;
+}
+
+#contact .form-container .row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#contact .form-container .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  /* background: #000; */
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+#contact .form-container .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: var(--main-color);
+}
+
+#contact .form-container .row100 .inputBox input,
+#contact .form-container .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #fff;
+}
+
+#contact .form-container .row100 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+#contact .form-container .row100 .inputBox input:focus + .text,
+#contact .form-container .row100 .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+#contact .form-container .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+#contact .form-container .row100 .inputBox input:focus ~ .line,
+#contact .form-container .row100 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+
+#contact .form-container .row100 .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0px;
+}
+
+#contact .form-container .row100 .inputBox.textarea textarea {
+  height: 80%;
+  resize: none;
+}
+
+#contact .form-container .row100 .inputBox textarea:focus + .text,
+#contact .form-container .row100 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+#contact .form-container .row100 .inputBox textarea:focus ~ .line,
+#contact .form-container .row100 .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+
+#contact .submit-parent-div {
+  text-align: center;
+}
+
+#contact input[type="submit"] {
+  font-size: 1.2rem;
+  align-self: center;
+  width: 25%;
+}
+
+/* To top button */
+.to-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transition: 0.75s;
+}
+
+.to-top-btn svg {
+  background-size: 50px 70px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: #555;
+  fill: var(--light-color);
+  transform: rotate(-90deg);
+  transition: 0.25s;
+}
+
+.to-top-btn a:hover svg {
+}
+
+.to-top-btn a:hover svg {
+  fill: var(--main-color);
+  background: #252525;
+}
+
+/* Footer */
+#main-footer .footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+#main-footer .footer-top h2 {
+  color: rgb(221, 203, 203);
+  font-size: 1.25rem;
+}
+
+#main-footer .footer-top .logo h2 {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+}
+
+#main-footer .footer-top h3 {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 0.25rem;
+}
+
+#main-footer .footer-top p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+#main-footer .footer-top li {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1.2rem;
+}
+
+#main-footer .footer-top .navigation li a,
+#main-footer .footer-top .contact li a {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+#main-footer .footer-top .navigation li a:hover,
+#main-footer .footer-top .contact li a:hover {
+  color: var(--light-color);
+}
+
+#main-footer .footer-top .navigation li a {
+  display: inline-block;
+  width: 100%;
+  border-bottom: #444 1px dotted;
+  padding: 0.5rem 0rem;
+}
+
+#main-footer .copy {
+  background: #1a1a1a;
+}
+
+#main-footer .copy > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-footer .copy p {
+  padding: 1.5rem;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+#main-footer .copy ul {
+  display: flex;
+}
+
+#main-footer .copy ul li a {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+  color: #fff;
+}
+
+#main-footer .copy ul li a:hover {
+  color: var(--main-color);
+}

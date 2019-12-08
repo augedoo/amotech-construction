@@ -1,0 +1,45 @@
+.container {
+  padding: 1rem;
+}
+
+#contactbar {
+  display: none;
+}
+
+#navbar .navbar-content {
+  flex-direction: column;
+}
+
+#navbar .navbar-content ul {
+  display: flex;
+  justify-content: space-evenly;
+  display: none;
+}
+
+#showcase .showcase-content h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#showcase .showcase-content .lead {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#services .items,
+#testimonials .items,
+#main-footer .footer-top,
+#work .categories,
+#about .wrapper {
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+.to-top-btn,
+#navbar ul {
+  display: none;
+}
+
+/* Smart Phones */
+@media screen and (max-width: 500px) {
+}

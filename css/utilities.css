@@ -1,0 +1,167 @@
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.current {
+  color: var(--main-color) !important;
+}
+
+.top-line {
+  height: 3px;
+  width: 75px;
+  background: var(--main-color);
+}
+
+.section-title {
+  text-align: center;
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  margin: 1rem auto;
+  text-align: center;
+}
+.text-left {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
+
+.text-primary {
+  color: val(--main-color);
+}
+
+.l-heading {
+  font-size: 4rem;
+}
+
+.m-heading {
+  font-size: 3rem;
+}
+
+.s-heading {
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #333;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.btn-light {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-main {
+  background: var(--main-color);
+  color: var(--light-color);
+}
+
+.btn-main:hover {
+  background: #252525|;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.bg-main {
+  background: var(--main-color);
+  color: var(--light-color);
+}
+
+.py-1 {
+  padding: 1rem 0rem;
+}
+.py-2 {
+  padding: 2rem 0rem;
+}
+.py-3 {
+  padding: 3rem 0rem;
+}
+.py-4 {
+  padding: 4rem 0rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.p-4 {
+  padding: 4rem;
+}
+
+.my-1 {
+  padding: 1rem 0rem;
+}
+.my-2 {
+  padding: 2rem 0rem;
+}
+.my-3 {
+  padding: 3rem 0rem;
+}
+.my-4 {
+  padding: 4rem 0rem;
+}
+.mx-1 {
+  padding: 1rem 0rem;
+}
+.mx-2 {
+  padding: 2rem 0rem;
+}
+.mx-3 {
+  padding: 3rem 0rem;
+}
+.mx-4 {
+  padding: 4rem 0rem;
+}
+
+.m-1 {
+  padding: 1rem;
+}
+.m-2 {
+  padding: 2rem;
+}
+.m-3 {
+  padding: 3rem;
+}
+.m-4 {
+  padding: 4rem;
+}
