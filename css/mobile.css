@@ -1,9 +1,17 @@
 .container {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
-#contactbar {
+/* Hiden Components */
+#contactbar .location,
+#contactbar .social {
   display: none;
+}
+
+#contactbar .phone {
+  text-align: center;
+  margin: auto;
+  padding: 0.25rem 0;
 }
 
 #navbar .navbar-content {
