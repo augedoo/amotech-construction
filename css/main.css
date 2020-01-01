@@ -96,7 +96,7 @@ header {
   left: 0px;
   right: 0px;
   padding: 1rem;
-  transition: all 0.5s;
+  transition: all 0.75s;
   background-color: transparent;
   z-index: 99;
 }
@@ -127,6 +127,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#navbar .toggler,
+#navbar .hamburger {
+  display: none;
 }
 
 #navbar ul {
@@ -240,8 +245,9 @@ Issues Here need fixing: Javascript Needed
 #showcase {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
-  margin-top: -89px;
+  margin-top: 0px;
   position: relative;
+  margin-top: -121px;
   /* this is included becuase the contactbar is making the showcase not cover the whole screen */
 }
 
