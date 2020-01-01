@@ -1,11 +1,12 @@
 /* Utilities */
 .container {
   max-width: var(--max-width);
+  width: 90%;
   margin: 0 auto;
 }
 
 .current {
-  color: var(--main-color) !important;
+  color: var(--main-color);
 }
 
 .top-line {
