@@ -489,7 +489,7 @@ header {
   text-align: center;
 }
 
-#contact input[type="submit"] {
+#contact button {
   font-size: 1.2rem;
   align-self: center;
   width: 25%;
