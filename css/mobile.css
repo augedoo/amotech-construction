@@ -1,16 +1,174 @@
+.to-top-btn {
+  display: none;
+}
+
+#navbar .navbar-content .menu {
+  display: none;
+}
+
+#header {
+  position: relative;
+}
+
+#navbar .toggler,
+#navbar .hamburger {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+#navbar .toggler {
+  z-index: 3;
+  opacity: 0;
+}
+
+#navbar .hamburger .line {
+  width: 100%;
+  height: 5px;
+  background: #fff;
+}
+
+#navbar .toggler:checked ~ .menu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#navbar .menu li {
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+#showcase .l-heading {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+#showcase .lead {
+  font-size: 1.4rem;
+  margin: 0px;
+  margin-bottom: 2rem;
+}
+
+#contact .form-container {
+  width: 100%;
+}
+
 #services .items,
-#testimonials .items,
-#main-footer .footer-top,
 #work .categories,
+#testimonials .items {
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
 #about .wrapper {
   grid-template-columns: 1fr;
   overflow: hidden;
 }
 
-.to-top-btn {
-  display: none;
+#contact input[type="submit"] {
+  width: 50%;
 }
 
-/* Smart Phones */
+#work {
+  background: #fafafa;
+}
+
+#testimonials {
+  background: #fafafa;
+  padding-top: 5rem;
+}
+
+#testimonials .items {
+  padding: 1rem;
+}
+
+#testimonials .items .item {
+  padding: 1rem 2rem;
+  border-radius: 0px;
+  /* -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.105),
+    -5px -5px 5px rgba(255, 255, 255, 0.708);
+}
+
+#testimonials .items .item:last-child {
+  grid-column: 1 / span 2;
+}
+
+/*==========================
+ Smart Phones
+ ==========================*/
 @media screen and (max-width: 500px) {
+  #contact .form-container {
+    width: 100%;
+  }
+
+  #contact .form-container .row100,
+  #testimonials .items {
+    grid-template-columns: 1fr;
+  }
+
+  #testimonials .items .item:last-child {
+    grid-column: 1;
+  }
+
+  #services .items,
+  #testimonials .items,
+  #main-footer .footer-top,
+  #work .categories,
+  #about .wrapper {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  #services .items .item,
+  #about .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .section-title,
+  #about .top-line {
+    margin: auto;
+    text-align: center;
+  }
+
+  #about .about-info {
+    padding-right: 0;
+  }
+
+  #contact input[type="submit"] {
+    width: 100%;
+  }
+
+  #showcase .l-heading {
+    font-size: 2rem;
+  }
+
+  #showcase .lead,
+  #services .item .item-description h3 {
+    font-size: 1.2rem;
+  }
+
+  footer .copy p {
+    margin-right: 0.5rem;
+    font-size: 0.25rem;
+  }
 }

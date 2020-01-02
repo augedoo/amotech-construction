@@ -11,6 +11,7 @@
   --dark-color: #272727;
   --max-width: 1200px;
   --site-font: "roboto", sans-serif;
+  --special-font: "catamaran", sans-serif;
 }
 
 /* Main Styling */
@@ -47,6 +48,83 @@ p {
 img {
   width: 100%;
   height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--dark-color);
+  transition: 0.3s;
+}
+
+/* Navbar */
+#navbar .navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar .logo h1 {
+  margin-bottom: 0px;
+  color: var(--light-color);
+  font-weight: 900;
+  font-family: "Arvo", serif;
+}
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar li a {
+  display: inline-block;
+  margin-left: 2rem;
+  color: var(--light-color);
+}
+
+#navbar .toggler,
+#navbar .hamburger {
+  display: none;
+}
+
+/* Showcase */
+#showcase {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("http://unsplash.it/1400") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+#showcase .showcase-content h1 {
+  font-family: var(--special-font);
+  font-weight: 900;
+}
+
+#showcase .showcase-content p {
+  color: #fff;
 }
 
 /* Services */
@@ -101,6 +179,9 @@ img {
 }
 
 /* About Us */
+#about {
+  background: #fafafa;
+}
 #about .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -194,10 +275,14 @@ img {
 }
 
 /* Home Gallery */
+#work {
+  padding-top: 3rem;
+}
 #work .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0rem;
+  padding-top: 2rem;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -255,6 +340,7 @@ img {
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  padding: 1rem;
 }
 
 .flip-box-front .text-wrap {
@@ -491,7 +577,7 @@ img {
 }
 
 #main-footer .copy p {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   font-weight: 300;
   font-size: 0.85rem;
   color: #ccc;
