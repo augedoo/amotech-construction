@@ -381,19 +381,19 @@
           <div class="top-line text-center"></div>
           <h1 class="section-title">Contact Us</h1>
           <h3 class="text-center">Here is how you can reach us.</h3>
-          <form action="#" id="contact-form" class="py-1">
+          <form name="contact" method="POST" data-netlify="true" id="contact-form" class="py-1">
             <div class="form-container">
               <div class="row100">
                 <div class="col">
                   <div class="inputBox">
-                    <input type="text" name="" required='required'>
+                    <input type="text" name="firstname" required='required'>
                     <span class="text">First Name</span>
                     <span class="line"></span>
                   </div>
                 </div>
                 <div class="col">
                   <div class="inputBox">
-                    <input type="text" name="" required='required'>
+                    <input type="text" name="lastname" required='required'>
                     <span class="text">Last Name</span>
                     <span class="line"></span>
                   </div>
@@ -402,14 +402,14 @@
               <div class="row100">
                 <div class="col">
                   <div class="inputBox">
-                    <input type="text" name="" required='required'><!-- This field needs validation: this could be dont with JavaScript-->
+                    <input type="email" name="email" required='required'><!-- This field needs validation: this could be dont with JavaScript-->
                     <span class="text">Email</span>
                     <span class="line"></span>
                   </div>
                 </div>
                 <div class="col">
                   <div class="inputBox">
-                    <input type="text" name="" required='required'><!-- This field needs validation: this could be dont with JavaScript-->
+                    <input type="number" name="mobile" required='required'><!-- This field needs validation: this could be dont with JavaScript-->
                     <span class="text">Mobile</span>
                     <span class="line"></span>
                   </div>
@@ -418,7 +418,7 @@
               <div class="row100">
                 <div class="col">
                   <div class="inputBox textarea">
-                    <textarea type="text" name="" required='required'></textarea>
+                    <textarea type="text" name="message" required='required'></textarea>
                     <span class="text">Type your message here...</span>
                     <span class="line"></span>
                   </div>
