@@ -56,6 +56,7 @@ header {
   left: 0;
   right: 0;
   z-index: 99;
+  padding: 2rem;
   background: var(--dark-color);
   transition: 0.3s;
 }
@@ -82,6 +83,11 @@ header {
   display: inline-block;
   margin-left: 2rem;
   color: var(--light-color);
+  transition: 0.35s;
+}
+
+#navbar li a:hover {
+  color: var(--main-color);
 }
 
 #navbar .toggler,
@@ -121,10 +127,12 @@ header {
 #showcase .showcase-content h1 {
   font-family: var(--special-font);
   font-weight: 900;
+  margin-bottom: -2rem;
 }
 
 #showcase .showcase-content p {
   color: #fff;
+  margin-bottom: 3rem;
 }
 
 /* Services */
@@ -561,7 +569,7 @@ header {
 #main-footer .footer-top .navigation li a {
   display: inline-block;
   width: 100%;
-  border-bottom: #444 1px dotted;
+  border-bottom: #333 1px dotted;
   padding: 0.5rem 0rem;
 }
 
@@ -578,7 +586,6 @@ header {
 
 #main-footer .copy p {
   padding: 1.5rem 0;
-  font-weight: 300;
   font-size: 0.85rem;
   color: #ccc;
 }
