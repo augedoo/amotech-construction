@@ -57,7 +57,7 @@ header {
   right: 0;
   z-index: 99;
   padding: 2rem;
-  background: var(--dark-color);
+  background: transparent;
   transition: 0.3s;
 }
 
@@ -276,7 +276,7 @@ header {
 
 #testimonials .items .item p::after,
 #testimonials .items .item p::before {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--main-color);
   display: inline-block;
